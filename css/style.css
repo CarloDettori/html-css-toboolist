@@ -1,6 +1,12 @@
 /*general*/
 
-
+body {
+    .poppins-medium {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+}
 
 
 /*font*/
@@ -22,11 +28,6 @@
     font-weight: 600;
     font-style: normal;
 }
-
-body {
-
-}
-
 
 /*font colors
 
