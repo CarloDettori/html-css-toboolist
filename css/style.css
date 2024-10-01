@@ -1,8 +1,8 @@
 /*general*/
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -32,13 +32,22 @@ body {
         font-style: normal;
     }
 
+    .container {
+        max-width: 1200px;
+        border: 2px solid red;
+        font-style: normal;
+        padding: 20px 10px;
+        margin: 0 auto;
+    }
+
 }
 
 .container {
     max-width: 1200px;
     border: 2px solid red;
     font-style: normal;
-     
+    padding: 20px 10px;
+    margin: 0 auto;
 }
 
 
