@@ -5,23 +5,42 @@
     box-sizing: border-box;
 }
 
-.show-container {
-    border: 2px solid red;
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
 }
 
+.debug {
+    border: 1px solid red;
+}
 
-.top-container {
+main {
     max-width: 1200px;
     font-style: normal;
     padding: 20px 20px;
+    margin: 30px auto
+    background-color: #f7f9fa;
+}
+
+.top-container {    
     margin: 30px auto 2px;
 }
 
 .bottom-container {
-    max-width: 1200px;
-    font-style: normal;
-    padding: 20px 20px;
     margin: 2px auto 30px;
+}
+
+header img {
+    vertical-align: middle;
+}
+
+h1 {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 20px;
+    font-size: 2em;
 }
 
 .blok {
@@ -76,6 +95,7 @@ black       #000000
 white       #ffffff
 
 */
+
 .white {
     color: #ffffff;
 }
@@ -102,7 +122,19 @@ white       #ffffff
     font-size: 1.2em;
 }
 
+.social-distancing-l2 {
+    margin: 0.5em;
+    padding: 0.5em;
+}
 
+.social-distancing-l1 {
+    margin: 0.2em;
+    padding: 0.2em;
+}
+
+li {
+    class="social-distancing-l1"
+}
 /*background*/
 
 
@@ -161,3 +193,4 @@ vomit       #b1c926
     border: 2px solid #d0d5d9;
     border-radius: 4px
 }
+
