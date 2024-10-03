@@ -12,6 +12,9 @@ body {
 
 }
 
+html {
+    background-color: #f7f9fa;
+}
 .container {
 
 }
@@ -22,9 +25,9 @@ body {
 
 main {
     font-style: normal;
-    margin: 30px auto
+    margin: 30px auto;
     background-color: #f7f9fa;
-    padding: 20px 0px 0px 20px;
+    padding: 20px 0px;
 }
 
 .top-container {    
@@ -36,7 +39,7 @@ main {
 .bottom-container {
     max-width: 800px;
     margin: 2px auto auto;
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 header img {
@@ -139,17 +142,47 @@ white       #ffffff
     padding: 0.2em;
 }
 
-ul>li {
-    padding: 5px;
-    list-style-type: circle;
+ul {
+    margin-bottom: 30px;
+    list-style-type: none;
 }
 
-.tick {
-    list-style-type: &check;
+ul li {
+    padding: 8px 0px;
 }
 
-.cross {
-    list-style-type: &#10007;
+ul>li::before {
+    margin-right: 10px;
+    margin-left: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;     /* si occupa di "smussare"
+                            gli angoli dei bordi i bordi:la percentuale rappresenta la distanza sui lati del bordo da cui partirà lo smussamento (qui dice che partira dal 50% della linea quindi "a metà starda della linea partirà la curva.) tuttavia, siccome il border rardius si sapplica ad ogni angolo del riquadro, avremo una quantità in percentuale che parte da un estremo di un lato e la stessa quantità in percentuale che parte dall'estremo opposto sempre dello stesso lato.
+                            Perciò se io ho un border-radius del 20%, ogni lato subira una curva che prende il 40% della lunghezza del lato, 20% da una parte e 20% dall'altra */
+    border: 1px solid #000;
+    padding: 4px;
+    display: inline-block; /* trasforma qualsiasi elemento 
+                            tag in un elemento inline-bloch, cioé un elemento che viene gestido come fosse un inline ma con la possibilità di potene modificare i parametri come fosse un block (le immagini si comportano cosi di default) */
+    line-height: 10px;    /* gestisce l'altezza, inteso
+                            come posizione verticale degli elementi (non la dimensione, quindi senza streacchare), a cui fa riferimento (in questo caso di un bordo), un'eventuale line-width gestirà invece la posizione orizzontale
+                            */
+    font-size: 12px;
+}
+
+li.tick::before { /* il selettore dice: per "per ogni
+                    li di classe tick aggiungi (in questo caso) il content sotto prima del contenuto del tag li"*/
+    content: '✓'; /* ha il compito di inserire un carattere
+                    ( in questo caso la stringa '✓') all'interno dell'elemento a cui è dedicato (in questo caso all'inizio del contenuto di qualunque elemento li con classe tick) */ 
+    color: green;
+    border-color: green;
+}
+
+li.cross::before {/* il selettore dice: per "per ogni
+                    li di classe cross aggiungi (in questo caso) il content sotto prima del contenuto del tag li"*/
+    content: '✗'; /* ha il compito di inserire un carattere
+                    ( in questo caso la stringa '✗') all'interno dell'elemento a cui è dedicato (in questo caso all'inizio del contenuto di qualunque elemento li con classe tick) */
+    color: red;
+    border-color: red;
 }
 
 /*
